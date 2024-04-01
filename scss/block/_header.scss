@@ -1,0 +1,132 @@
+.header {
+  background: $white-color;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sitenav {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    &__link {
+      position: relative;
+      display: inline-block;
+      font-family: "Public Sans";
+      font-size: 1.4rem;
+      line-height: 1.14;
+      color: $text-color-2;
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+
+      &:hover {
+        color: $text-color-1;
+      }
+      &:hover::after {
+        color: $text-color-1;
+        width: 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+    }
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  &-btn {
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  .sitenav-hidden {
+    display: none;
+    position: absolute;
+    background: $white-color;
+    padding: 3.2rem;
+    text-align: center;
+    top: 8.8rem;
+    border-radius: 4px;
+    width: 90%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 1.1666;
+        letter-spacing: -0.14;
+        color: $text-color-2;
+        padding: 0;
+      }
+    }
+    .sitenav-hidden.show-nav {
+      display: block;
+    }
+  }
+
+  .toggler-btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+    @include responsive(tablet) {
+      display: block;
+    }
+    .toggler-img {
+      display: none;
+      @include responsive(tablet) {
+        display: block;
+      }
+    }
+  }
+  @include responsive(tablet) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  @include responsive(mobile) {
+    padding-bottom: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+}
+
+.overlay {
+  background: linear-gradient(
+    180deg,
+    #2d314d 0%,
+    rgba(45, 49, 77, 0.0001) 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  display: none;
+}
+
+.overlay.show-nav {
+  display: block;
+}
