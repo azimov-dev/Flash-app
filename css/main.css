@@ -38,6 +38,7 @@ html {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
+  background: url(../images/hero-tablet.jpg);
 }
 
 ul,
@@ -234,28 +235,7 @@ body {
   color: #9597a5;
   padding: 0;
 }
-.header .sitenav-hidden .sitenav-hidden.show-nav {
-  display: block;
-}
-.header .toggler-btn {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  display: none;
-}
-@media screen and (max-width: 769px) {
-  .header .toggler-btn {
-    display: block;
-  }
-}
-.header .toggler-btn .toggler-img {
-  display: none;
-}
-@media screen and (max-width: 769px) {
-  .header .toggler-btn .toggler-img {
-    display: block;
-  }
-}
+
 @media screen and (max-width: 769px) {
   .header {
     padding-top: 2rem;
@@ -295,6 +275,7 @@ body {
   padding-bottom: 17rem;
   background-position: right top;
 }
+
 @media screen and (max-width: 1225px) {
   .hero {
     background: none;
