@@ -389,6 +389,7 @@ body {
 }
 .choose__list {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
 }
 @media screen and (max-width: 769px) {
@@ -400,9 +401,10 @@ body {
     text-align: center;
   }
 }
+
 .choose__item {
   width: 100%;
-  max-width: 555px;
+  max-width: 255px;
   background: #fafafa;
   border-radius: 8px;
   box-shadow: 1px 5px 5px 1px #2d314d;
