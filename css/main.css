@@ -38,7 +38,6 @@ html {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background: url(../images/hero-tablet.jpg);
 }
 
 ul,
@@ -60,6 +59,11 @@ body {
   font-size: 1.8rem;
   line-height: 1.56;
   color: #9597a5;
+  background: url(../images/hero-tablet.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -147,10 +151,12 @@ body {
     text-align: center;
   }
 }
+
 .articles__list {
   display: flex;
   gap: 3rem;
 }
+
 @media screen and (max-width: 1225px) {
   .articles__list {
     display: flex;
@@ -159,9 +165,6 @@ body {
   }
 }
 
-.header {
-  background: #ffffff;
-}
 .header .header__container {
   display: flex;
   align-items: center;
@@ -178,7 +181,7 @@ body {
   font-family: "Public Sans";
   font-size: 2rem;
   line-height: 1.14;
-  color: #9597a5;
+  color: #2d314d;
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
 }
@@ -270,7 +273,6 @@ body {
 
 .hero {
   position: relative;
-  background-color: #fafafa;
   padding-top: 17rem;
   padding-bottom: 17rem;
   background-position: right top;
@@ -337,9 +339,6 @@ body {
   margin-bottom: 3.6rem;
 }
 
-.choose {
-  background-color: #f4f5f7;
-}
 .choose__container {
   display: flex;
   flex-direction: column;
@@ -380,7 +379,7 @@ body {
   font-size: 1.8rem;
   line-height: 1.56;
   letter-spacing: -0.28125px;
-  color: #9597a5;
+  color: #2d314d;
   margin-bottom: 7.2rem;
 }
 @media screen and (max-width: 769px) {
@@ -403,18 +402,17 @@ body {
 }
 .choose__item {
   width: 100%;
-  max-width: 255px;
+  max-width: 555px;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 1px 5px 5px 1px #2d314d;
+  display: flex;
+  flex-direction: column;
 }
-.choose__item img {
-  margin-bottom: 5.6rem;
+.choose__item i {
+  margin-bottom: 1.6rem;
 }
-@media screen and (max-width: 769px) {
-  .choose__item img {
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 2.4rem;
-  }
-}
+
 .choose__item--title {
   font-family: "Public Sans";
   font-weight: 100;
@@ -424,11 +422,7 @@ body {
   color: #2d314d;
   margin-bottom: 2.6rem;
 }
-@media screen and (max-width: 769px) {
-  .choose__item--title {
-    margin-bottom: 1.6rem;
-  }
-}
+
 .choose__item--desc {
   font-family: "Public Sans";
   font-size: 1.6rem;
@@ -437,9 +431,6 @@ body {
   color: #9597a5;
 }
 
-.articles {
-  background-color: #fafafa;
-}
 .articles__container {
   display: flex;
   flex-direction: column;
